@@ -10,8 +10,11 @@ public class LezioneService {
     @Autowired
     private LezioneRepository repository;
 
-    public List<Lezione> getLezioniByCapitolo(Long capitoloID){
+    public List<Lezione> getLezioniByCapitolo(Long capitoloId){
         return repository.findAll();
+    }
+    public Lezione getLezioneById(Long lezioneId){
+        return repository.findById(lezioneId).orElse(null);
     }
     public Lezione saveLezione(Lezione lezione){
         return repository.save(lezione);

@@ -11,9 +11,13 @@ public class LezioneController {
     @Autowired
     private LezioneService service;
 
-    @GetMapping("/capitolo/{capitoloId}")
+    @GetMapping("/capitoli/{capitoloId}")
     public List<Lezione> getLezioniByCapitolo(@PathVariable Long capitoloId){
         return service.getLezioniByCapitolo(capitoloId);
+    }
+    @GetMapping("/lezioni/{lezioneId}")
+    public Lezione getLezioneById(@PathVariable Long lezioneId){
+        return service.getLezioneById(lezioneId);
     }
     @PostMapping
     public Lezione createLezione(@RequestBody Lezione lezione){
