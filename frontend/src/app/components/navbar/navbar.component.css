@@ -1,0 +1,28 @@
+.navbar {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin-bottom: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a.active {
+  color: #007bff;
+  text-decoration: underline;
+}

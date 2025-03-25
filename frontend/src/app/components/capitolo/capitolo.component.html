@@ -1,0 +1,9 @@
+<section class="capitolo-container" *ngIf="capitolo">
+  <h1 class="capitolo-title">{{ capitolo.titolo }}</h1>
+  <p class="capitolo-desc">{{ capitolo.descrizione }}</p>
+
+  <div class="lezione" *ngFor="let lezione of capitolo.lezioni">
+    <h2>{{ lezione.titolo }}</h2>
+    <p>{{ lezione.contenuto }}</p>
+  </div>
+</section>

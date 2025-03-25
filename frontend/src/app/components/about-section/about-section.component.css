@@ -1,0 +1,41 @@
+.about-container {
+  scroll-snap-align: start;
+  padding: 60px 40px;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.about-description {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.team-member {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+}
+
+.team-member h4 {
+  margin: 0 0 10px;
+}
+
+.team-member a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.team-member a:hover {
+  text-decoration: underline;
+}

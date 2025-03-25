@@ -1,0 +1,39 @@
+.capitoli-container {
+  padding: 60px 40px;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.capitolo-card {
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.capitolo-card h3 {
+  margin-top: 0;
+}
+
+.capitolo-card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.capitolo-card button:hover {
+  background-color: #0056b3;
+}

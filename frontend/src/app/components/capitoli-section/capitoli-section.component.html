@@ -1,0 +1,9 @@
+<section class="capitoli-container">
+  <h2 class="section-title">Capitoli disponibili</h2>
+
+  <div class="capitolo-card" *ngFor="let c of capitoli">
+    <h3>{{ c.titolo }}</h3>
+    <p>{{ c.descrizione }}</p>
+    <button (click)="vaiACapitolo(c.id)">Vai al Capitolo</button>
+  </div>
+</section>

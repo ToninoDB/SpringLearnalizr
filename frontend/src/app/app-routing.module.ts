@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { ListaCapitoliComponent } from './components/lista-capitoli/lista-capitoli.component';
-import { DettagliCapitoloComponent } from './components/dettagli-capitolo/dettagli-capitolo.component';
-import { DettagliLezioneComponent } from './components/dettagli-lezione/dettagli-lezione.component';
+import { CapitoloComponent } from 'src/app/components/capitolo/capitolo.component'; // importa il componente che mostra il dettaglio
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'chapters', component: ListaCapitoliComponent },
-  { path: 'chapters/:id', component: DettagliCapitoloComponent },
-  { path: 'lessons/:id', component: DettagliLezioneComponent },
+  { path: 'capitolo/:id', component: CapitoloComponent },
   { path: '**', redirectTo: '' },
 ];
 

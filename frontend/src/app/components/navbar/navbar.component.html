@@ -1,1 +1,13 @@
-<p>navbar works!</p>
+<nav class="navbar">
+  <ul>
+    <li><a href="#hero" [class.active]="activeSection === 'hero'">Home</a></li>
+    <li>
+      <a href="#capitoli" [class.active]="activeSection === 'capitoli'"
+        >Capitoli</a
+      >
+    </li>
+    <li>
+      <a href="#about" [class.active]="activeSection === 'about'">About</a>
+    </li>
+  </ul>
+</nav>
