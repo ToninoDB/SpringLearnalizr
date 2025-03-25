@@ -2,6 +2,8 @@ package com.learnalizr.backend.model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -14,6 +16,7 @@ public class Capitolo {
     private String descrizione;
 
     @OneToMany(mappedBy = "capitolo", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
     private List<Lezione> lezioni;
 
     public Capitolo() {

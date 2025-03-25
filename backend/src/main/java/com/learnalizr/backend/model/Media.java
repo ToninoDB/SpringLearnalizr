@@ -3,6 +3,8 @@ package com.learnalizr.backend.model;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 public class Media {
 
@@ -19,6 +21,7 @@ public class Media {
 
     @ManyToOne
     @JoinColumn(name = "lesson_id", nullable = false)
+    @JsonBackReference
     private Lezione lezione;
 
     // Costruttori

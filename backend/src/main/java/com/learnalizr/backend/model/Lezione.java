@@ -3,6 +3,9 @@ package com.learnalizr.backend.model;
 import jakarta.persistence.*;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 public class Lezione {
     @Id
@@ -13,9 +16,11 @@ public class Lezione {
 
     @ManyToOne
     @JoinColumn(name = "capitolo_id", nullable = false)
+    @JsonBackReference
     private Capitolo capitolo;
 
     @OneToMany(mappedBy = "lezione", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
     private List<Media> media;
 
     public Lezione() {

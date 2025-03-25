@@ -22,7 +22,7 @@ public class DataLoader {
     public void loadData() {
         if (capitoloRepository.count() == 0) {
             Capitolo capitolo = new Capitolo();
-            capitolo.setTitolo("Introduzione a Spring");
+            capitolo.setTitolo("Introduzione a SpringBoot");
 
             Lezione lezione1 = new Lezione();
             lezione1.setTitolo("Cos'è Spring?");

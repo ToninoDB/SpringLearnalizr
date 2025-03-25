@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root',
 })
 export class MainServiceService {
-  private apiUrl = environment.apiUrl;
+  private apiUrl = 'http://localhost:8080';
 
   constructor(private http: HttpClient) {}
 
