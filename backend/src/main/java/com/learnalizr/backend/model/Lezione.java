@@ -1,7 +1,8 @@
 package com.learnalizr.backend.model;
-import javax.persistence.Entity;
-import javax.persistence.*;
+
+import jakarta.persistence.*;
 import java.util.List;
+
 @Entity
 public class Lezione {
     @Id
@@ -17,46 +18,58 @@ public class Lezione {
     @OneToMany(mappedBy = "lezione", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Media> media;
 
-    public Lezione(){}
+    public Lezione() {
+    }
 
-    public Lezione(String titolo, String contenuto, Capitolo capitolo, Media media){
+    public Lezione(String titolo, String contenuto, Capitolo capitolo, Media media) {
         this.titolo = titolo;
         this.contenuto = contenuto;
         this.capitolo = capitolo;
     }
-    public void setID(Long id){
+
+    public void setID(Long id) {
         this.id = id;
     }
-    public Long getID(){
+
+    public Long getID() {
         return id;
     }
-    public void setTitolo(String titolo){
+
+    public void setTitolo(String titolo) {
         this.titolo = titolo;
     }
-    public String getTitolo(){
+
+    public String getTitolo() {
         return titolo;
     }
-    public void setContenuto(String contenuto){
+
+    public void setContenuto(String contenuto) {
         this.contenuto = contenuto;
     }
-    public String getContenuto(){
+
+    public String getContenuto() {
         return contenuto;
     }
-    public void setCapitolo(Capitolo capitolo){
+
+    public void setCapitolo(Capitolo capitolo) {
         this.capitolo = capitolo;
     }
-    public Capitolo getCapitolo(){
+
+    public Capitolo getCapitolo() {
         return capitolo;
     }
-    public void setMedia(List<Media> media){
+
+    public void setMedia(List<Media> media) {
         this.media = media;
     }
-    public List<Media> getMedia(){
+
+    public List<Media> getMedia() {
         return media;
     }
+
     @Override
     public String toString() {
-        return "Lezione{" +"id=" + id +", titolo='" + titolo + '\'' +
+        return "Lezione{" + "id=" + id + ", titolo='" + titolo + '\'' +
                 ", contenuto='" + contenuto + '\'' +
                 ", capitolo=" + (capitolo != null ? capitolo.getID() : "null") +
                 '}';
