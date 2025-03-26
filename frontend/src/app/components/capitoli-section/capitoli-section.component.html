@@ -5,9 +5,9 @@
   <div class="capitolo-navbar">
     <ul>
       <li
-        *ngFor="let c of capitoli; let i = index"
-        [class.active]="i === selectedIndex"
-        (click)="scrollToSlide(i)"
+        *ngFor="let c of capitoli"
+        [class.active]="c.id === selectedId"
+        (click)="scrollToSlideById(c.id)"
       >
         {{ c.titolo }}
       </li>
@@ -17,7 +17,12 @@
   <!-- 🔹 Slider orizzontale dei capitoli -->
   <div class="capitolo-slider-wrapper">
     <div class="capitolo-slider" #slider>
-      <div class="capitolo-slide" *ngFor="let c of capitoli" appFadeInOnScroll>
+      <div
+        class="capitolo-slide"
+        *ngFor="let c of capitoli"
+        [attr.id]="'slide-' + c.id"
+        [appFadeInOnScroll]="false"
+      >
         <div class="capitolo-info">
           <h3>{{ c.titolo }}</h3>
           <p>{{ c.descrizione }}</p>

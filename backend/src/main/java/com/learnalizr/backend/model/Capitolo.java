@@ -13,6 +13,7 @@ public class Capitolo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String titolo;
+    @Column(columnDefinition = "TEXT")
     private String descrizione;
 
     @OneToMany(mappedBy = "capitolo", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
