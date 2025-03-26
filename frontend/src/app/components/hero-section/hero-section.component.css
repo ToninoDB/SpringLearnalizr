@@ -1,24 +1,60 @@
 .hero-container {
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to bottom right, #f8f9fa, #e2e6ea);
+  flex-direction: column; /* Dispone gli elementi in colonna (verticalmente) */
+  align-items: center; /* Centra gli elementi orizzontalmente */
+  justify-content: center; /* Centra gli elementi verticalmente */
+  background: linear-gradient(to bottom right, rgba(28, 136, 60, 0.8), #A1D884); /* Gradiente da Spring Green a Lime Green */
+  position: relative;
   scroll-snap-align: start;
+  color: #F4F4F4; /* Light Gray */
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 300px; /* Larghezza dell'immagine */
+  height: auto; /* Mantiene le proporzioni */
+  opacity: 0.7; /* Rende l'immagine leggermente trasparente */
+  margin: 0 auto; /* Centra l'immagine orizzontalmente */
+  display: block; /* Assicura che l'immagine sia trattata come un blocco */
 }
 
 .hero-content {
   text-align: center;
+  padding: 20px;
+  z-index: 1; /* Assicura che il contenuto sia sopra l'immagine */
+  position: relative;
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: #F4F4F4; /* Light Gray */
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Aggiunge profondità al testo */
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: #6c757d;
+  font-weight: bold;
+  color: #F4F4F4; /* Light Gray */
+  line-height: 1.6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Aggiunge profondità al testo */
+  margin-bottom: 30px; /* Aggiunge spazio sotto il sottotitolo */
+}
+
+.hero-button {
+  margin-top: 20px;
+  background-color: #4F4F4F; /* Charcoal Gray */
+  color: #F4F4F4; /* Light Gray */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #5A9216; /* Leaf Green */
 }
