@@ -18,7 +18,7 @@ export class FadeInOnScrollDirective implements OnInit {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit(): void {
-    if (!this.enableFadeIn) return; // 👉 salta la logica se disattivato
+    if (!this.enableFadeIn) return; // salta la logica se disattivato
 
     const observer = new IntersectionObserver(
       (entries) => {

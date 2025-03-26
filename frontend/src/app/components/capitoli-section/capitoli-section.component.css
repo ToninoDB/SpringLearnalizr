@@ -4,8 +4,12 @@
   flex-direction: column; /* Dispone gli elementi in colonna */
   align-items: center; /* Centra gli elementi orizzontalmente */
   justify-content: center; /* Centra gli elementi verticalmente */
-  background: linear-gradient(to top right, rgba(28, 136, 60, 0.8), #A1D884); /* Gradiente da Leaf Green a Lime Green */
-  color: #F4F4F4; /* Light Gray */
+  background: linear-gradient(
+    to top right,
+    rgba(28, 136, 60, 0.8),
+    #a1d884
+  ); /* Gradiente da Leaf Green a Lime Green */
+  color: #f4f4f4; /* Light Gray */
   padding: 40px;
   scroll-snap-align: start;
   overflow: hidden;
@@ -14,7 +18,7 @@
 .section-title {
   font-size: 3rem;
   font-weight: bold;
-  color: #F4F4F4; /* Light Gray */
+  color: #f4f4f4; /* Light Gray */
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Aggiunge profondità al testo */
   text-align: center;
@@ -41,7 +45,7 @@
   position: relative;
   padding-bottom: 5px;
   transition: color 0.3 ease;
-  color: #F4F4F4; /* Light Gray */
+  color: #f4f4f4; /* Light Gray */
 }
 
 .capitolo-navbar li.active {
@@ -63,6 +67,7 @@
   color: rgba(250, 250, 250, 0.8); /* Leaf Green */
 }
 
+/* Slider orizzontale */
 .capitolo-slider-wrapper {
   overflow: hidden;
   width: 100%;
@@ -94,8 +99,8 @@
 }
 
 .capitolo-info {
-  background-color: #FFFFFF; /* White */
-  color: #4F4F4F; /* Charcoal Gray */
+  background-color: #ffffff; /* White */
+  color: #4f4f4f; /* Charcoal Gray */
   padding: 40px;
   border-radius: 12px;
   text-align: left;
@@ -116,12 +121,12 @@
   padding: 10px 20px;
   background-color: rgba(28, 136, 60, 0.8); /* Leaf Green */
   border: none;
-  color: #FFFFFF; /* White */
+  color: #ffffff; /* White */
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .capitolo-info button:hover {
-  background-color: #A1D884; /* Lime Green */
+  background-color: #a1d884; /* Lime Green */
 }

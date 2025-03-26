@@ -1,0 +1,26 @@
+<section
+  class="lezione-container fade-in-section"
+  [appFadeInOnScroll]="true"
+  [attr.id]="'lezione-' + lezione.id"
+>
+  <div class="lezione-content">
+    <!-- Testo a sinistra -->
+    <div class="testo">
+      <h2>{{ lezione.titolo }}</h2>
+      <p>{{ lezione.contenuto }}</p>
+    </div>
+
+    <!-- Media a destra -->
+    <div class="media" *ngIf="lezione.media && lezione.media.length > 0">
+      <ng-container *ngFor="let m of lezione.media">
+        <!-- <img *ngIf="m.tipo === 'image'" [src]="m.url" [alt]="m.alt || ''" />
+        <video
+          *ngIf="m.tipo === 'video'"
+          [src]="m.url"
+          controls
+          [poster]="m.poster"
+        ></video> -->
+      </ng-container>
+    </div>
+  </div>
+</section>

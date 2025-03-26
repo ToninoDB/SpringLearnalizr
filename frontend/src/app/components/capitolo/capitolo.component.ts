@@ -22,4 +22,21 @@ export class CapitoloComponent implements OnInit {
       this.capitolo = data;
     });
   }
+
+  scrollToLezioneById(id: number): void {
+    const element = document.getElementById('lezione-' + id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  scrollToPrimaLezione(): void {
+    if (this.capitolo?.lezioni?.length) {
+      const primoId = 'lezione-' + this.capitolo.lezioni[0].id;
+      const el = document.getElementById(primoId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
 }

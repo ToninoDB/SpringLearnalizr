@@ -1,0 +1,23 @@
+<!-- Bottone hamburger -->
+<div class="hamburger" [class.open]="menuAperto" (click)="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<a routerLink="/" class="home-link">HOME</a>
+
+<!-- Overlay -->
+<div class="overlay" [class.open]="menuAperto">
+  <div class="menu-content">
+    <small>CAPITOLO {{ capitoloId }}:</small>
+    <h3>{{ titoloCapitolo }}</h3>
+    <hr />
+    <h4>Lezioni</h4>
+    <ul>
+      <li *ngFor="let lezione of lezioni" (click)="scrollToLezione(lezione.id)">
+        {{ lezione.titolo }}
+      </li>
+    </ul>
+  </div>
+</div>

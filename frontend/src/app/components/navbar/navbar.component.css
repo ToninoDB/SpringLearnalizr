@@ -4,8 +4,8 @@
   left: 0;
   width: 100%;
   padding: 15px 40px; /* Ridotto il padding per un migliore allineamento */
-  background-color: #1F1F2E; /* Sfondo scuro per contrasto */
-  color: #F4F4F4; /* Light Gray per il testo */
+  background-color: #1f1f2e; /* Sfondo scuro per contrasto */
+  color: #f4f4f4; /* Light Gray per il testo */
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombra per separare la navbar dal contenuto */
   display: flex;
@@ -27,7 +27,7 @@
 }
 
 .navbar a {
-  color: #F4F4F4; /* Light Gray */
+  color: #f4f4f4; /* Light Gray */
   font-weight: 500;
   text-decoration: none;
   font-size: 1rem;
@@ -43,7 +43,7 @@
   bottom: 0;
   height: 2px;
   width: 0%;
-  background-color: #A1D884; /* Lime Green */
+  background-color: #a1d884; /* Lime Green */
   transition: width 0.3s ease;
 }
 

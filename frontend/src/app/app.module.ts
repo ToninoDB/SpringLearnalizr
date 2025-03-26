@@ -11,6 +11,9 @@ import { CapitoliSectionComponent } from './components/capitoli-section/capitoli
 import { AboutSectionComponent } from './components/about-section/about-section.component';
 import { CapitoloComponent } from './components/capitolo/capitolo.component';
 import { FadeInOnScrollDirective } from './fade-in-on-scroll.directive';
+import { HeroCapitoloComponent } from './components/hero-capitolo/hero-capitolo.component';
+import { LezioneCapitoloComponent } from './components/lezione-capitolo/lezione-capitolo.component';
+import { SidebarMenuCapitoloComponent } from './components/sidebar-menu-capitolo/sidebar-menu-capitolo.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { FadeInOnScrollDirective } from './fade-in-on-scroll.directive';
     AboutSectionComponent,
     CapitoloComponent,
     FadeInOnScrollDirective,
+    HeroCapitoloComponent,
+    LezioneCapitoloComponent,
+    SidebarMenuCapitoloComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
