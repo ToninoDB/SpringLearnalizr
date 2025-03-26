@@ -1,0 +1,16 @@
+<section class="hero-container">
+  <div class="hero-text">
+    <small>Capitolo {{ capitoloId }}</small>
+    <h1>{{ titolo }}</h1>
+    <p>{{ descrizione }}</p>
+
+    <button (click)="scroll.emit()">⬇ Inizia</button>
+  </div>
+
+  <div class="hero-cards">
+    <div class="lezione-card" *ngFor="let lezione of lezioni">
+      <div class="card-icon">📘</div>
+      <span>{{ lezione.titolo }}</span>
+    </div>
+  </div>
+</section>
