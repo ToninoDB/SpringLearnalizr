@@ -24,6 +24,7 @@ public class DataLoader {
                         // Creazione dei capitoli con le lezioni
                         Capitolo intro = new Capitolo();
                         intro.setTitolo("Introduzione a Spring");
+                        intro.setDescrizione("Questo capitolo introduce il framework Spring, spiegando cos'è, perché utilizzarlo e come Spring Boot semplifica lo sviluppo.");
                         intro.setLezioni(List.of(
                                         new Lezione("Cos'è Spring?",
                                                         "Spring è un framework open source che semplifica lo sviluppo di applicazioni JAVA Enterprise.\r\n",
@@ -45,6 +46,7 @@ public class DataLoader {
 
                         Capitolo di = new Capitolo();
                         di.setTitolo("Dependency Injection");
+                        di.setDescrizione("Questo capitolo spiega il concetto di Dependency Injection (DI) e come viene implementato in Spring tramite IoC e l'annotazione @Autowired.");
                         di.setLezioni(List.of(
                                         new Lezione("Cos'è la Dependency Injection?",
                                                         "La Dependency Injection (DI) è un principio fondamentale di Spring che permette a un oggetto di ricevere le sue dipendenze invece di crearle manualmente.\r\n",
@@ -66,6 +68,7 @@ public class DataLoader {
 
                         Capitolo mvc = new Capitolo();
                         mvc.setTitolo("Spring MVC");
+                        mvc.setDescrizione("Questo capitolo introduce il framework Spring MVC, spiegando il modello Model-View-Controller e il ruolo dei controller.");
                         mvc.setLezioni(List.of(
                                         new Lezione("Cos'è Spring MVC?",
                                                         "Spring MVC è un framework per realizzare applicazioni web basate sul modello MCV sfruttando i punti di forza offerti dal framework Spring\r\n"
@@ -91,6 +94,7 @@ public class DataLoader {
 
                         Capitolo hibernate = new Capitolo();
                         hibernate.setTitolo("Hibernate e JPA");
+                        hibernate.setDescrizione("Questo capitolo esplora Hibernate e JPA, spiegando come gestire la persistenza dei dati in applicazioni Java.");
                         hibernate.setLezioni(List.of(
                                         new Lezione("Cos'è Hibernate?",
                                                         "Hibernate è un framework ORM che semplifica la gestione della persistenza dei dati in applicazioni Java.\r\n",
@@ -112,6 +116,7 @@ public class DataLoader {
 
                         Capitolo apiRest = new Capitolo();
                         apiRest.setTitolo("API REST con Spring Boot");
+                        apiRest.setDescrizione("Questo capitolo spiega come creare e gestire API REST utilizzando Spring Boot.");
                         apiRest.setLezioni(List.of(
                                         new Lezione("Cos'è un'API REST?",
                                                         "Un'API REST (Representational State Transfer) è un'architettura per lo sviluppo di applicazioni web basate su risorse, che possono essere identificate da URL.\r\n"
@@ -143,6 +148,7 @@ public class DataLoader {
 
                         Capitolo security = new Capitolo();
                         security.setTitolo("Spring Security");
+                        security.setDescrizione("Questo capitolo introduce Spring Security, spiegando come gestire autenticazione e autorizzazione.");
                         security.setLezioni(List.of(
                                         new Lezione("Autenticazione e Autorizzazione",
                                                         "Spring Security è un framework potente e flessibile per gestire la sicurezza nelle applicazioni.\r\n"
@@ -179,6 +185,7 @@ public class DataLoader {
 
                         Capitolo tutorial = new Capitolo();
                         tutorial.setTitolo("Tutorial: Creazione Progetto Spring Boot");
+                        tutorial.setDescrizione("Questo capitolo guida l'utente nella creazione di un progetto Spring Boot, dalla configurazione iniziale ai test.");
                         tutorial.setLezioni(List.of(
                                         new Lezione("Configurazione iniziale",
                                                         "Per iniziare un progetto con Spring Boot, il modo più semplice è usare **Spring Initializr** (https://start.spring.io/).\r\n"
