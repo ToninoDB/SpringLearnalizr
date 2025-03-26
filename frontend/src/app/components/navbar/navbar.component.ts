@@ -14,14 +14,14 @@ export class NavbarComponent {
     const sections = ['hero', 'capitoli', 'about'];
 
     for (const section of sections) {
-      const element = document.getElementById(section);
-      if (element) {
-        const offsetTop = element.offsetTop;
-        const offsetHeight = element.offsetHeight;
+      const el = document.getElementById(section);
+      if (el) {
+        const offsetTop = el.offsetTop;
+        const offsetHeight = el.offsetHeight;
 
         if (
-          scrollY >= offsetTop - 50 &&
-          scrollY < offsetTop + offsetHeight - 50
+          scrollY >= offsetTop - 100 &&
+          scrollY < offsetTop + offsetHeight - 100
         ) {
           this.activeSection = section;
           break;

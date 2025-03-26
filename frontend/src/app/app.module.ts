@@ -10,6 +10,7 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
 import { CapitoliSectionComponent } from './components/capitoli-section/capitoli-section.component';
 import { AboutSectionComponent } from './components/about-section/about-section.component';
 import { CapitoloComponent } from './components/capitolo/capitolo.component';
+import { FadeInOnScrollDirective } from './fade-in-on-scroll.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CapitoloComponent } from './components/capitolo/capitolo.component';
     CapitoliSectionComponent,
     AboutSectionComponent,
     CapitoloComponent,
+    FadeInOnScrollDirective,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
