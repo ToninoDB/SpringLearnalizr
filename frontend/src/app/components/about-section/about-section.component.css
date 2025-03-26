@@ -3,16 +3,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom right, #f8f9fa, #e2e6ea);
+  background: linear-gradient(to bottom right, rgba(28, 136, 60, 0.8), #a1d884);
   scroll-snap-align: start;
   flex-direction: column;
+  color: #f4f4f4; /* Light Gray */
+  padding: 40px;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: bold; /* Titolo in grassetto */
+  color: #f4f4f4; /* Light Gray */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Aggiunge profondità al testo */
+  text-align: center; /* Centra il testo */
 }
 
 .about-description {
-  max-width: 600px;
-  margin: 0 auto 40px;
+  max-width: 800px;
   font-size: 1.2rem;
-  color: #555;
+  font-weight: 500; /* Testo leggermente più marcato */
+  color: #f4f4f4; /* Light Gray */
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Aggiunge profondità al testo */
+  text-align: center; /* Centra il testo */
+  margin-bottom: 40px;
 }
 
 .team {
@@ -23,22 +40,45 @@
 }
 
 .team-member {
-  background-color: white;
+  background-color: #ffffff; /* White */
+  color: #4f4f4f; /* Charcoal Gray */
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
   max-width: 250px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .team-member h4 {
   margin: 0 0 10px;
+  font-size: 1.5rem;
+  font-weight: bold; /* Titolo del membro del team in grassetto */
+  color: rgba(28, 136, 60, 0.8); /* Leaf Green */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Aggiunge profondità al testo */
+}
+
+.team-member p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400; /* Testo normale */
+  color: #4f4f4f; /* Charcoal Gray */
 }
 
 .team-member a {
-  color: #007bff;
+  color: rgba(28, 136, 60, 0.8); /* Leaf Green */
   text-decoration: none;
+  font-weight: bold; /* Link in grassetto */
+  transition: color 0.3s ease;
 }
 
 .team-member a:hover {
+  color: #a1d884; /* Lime Green */
   text-decoration: underline;
 }
