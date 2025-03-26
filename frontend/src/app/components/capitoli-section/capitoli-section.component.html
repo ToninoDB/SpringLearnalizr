@@ -1,9 +1,29 @@
 <section class="capitoli-container">
-  <h2 class="section-title">Capitoli disponibili</h2>
+  <h2 class="section-title">Capitoli</h2>
 
-  <div class="capitolo-card" *ngFor="let c of capitoli">
-    <h3>{{ c.titolo }}</h3>
-    <p>{{ c.descrizione }}</p>
-    <button (click)="vaiACapitolo(c.id)">Vai al Capitolo</button>
+  <!-- 🔹 Navbar capitoli orizzontale -->
+  <div class="capitolo-navbar">
+    <ul>
+      <li
+        *ngFor="let c of capitoli; let i = index"
+        [class.active]="i === selectedIndex"
+        (click)="scrollToSlide(i)"
+      >
+        {{ c.titolo }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- 🔹 Slider orizzontale dei capitoli -->
+  <div class="capitolo-slider-wrapper">
+    <div class="capitolo-slider" #slider>
+      <div class="capitolo-slide" *ngFor="let c of capitoli" appFadeInOnScroll>
+        <div class="capitolo-info">
+          <h3>{{ c.titolo }}</h3>
+          <p>{{ c.descrizione }}</p>
+          <button (click)="vaiACapitolo(c.id)">Vai al Capitolo</button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

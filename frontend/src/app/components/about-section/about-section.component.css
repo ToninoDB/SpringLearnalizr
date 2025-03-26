@@ -1,8 +1,11 @@
 .about-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #f8f9fa, #e2e6ea);
   scroll-snap-align: start;
-  padding: 60px 40px;
-  text-align: center;
-  background-color: #f8f9fa;
+  flex-direction: column;
 }
 
 .about-description {

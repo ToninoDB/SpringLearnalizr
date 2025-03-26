@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { MainServiceService } from '../../services/main-service.service';
+import { Capitolo } from '../../models/capitolo.model';
 import { Router } from '@angular/router';
-import { Capitolo } from 'src/app/models/capitolo.model';
-import { MainServiceService } from 'src/app/services/main-service.service';
 
 @Component({
   selector: 'app-capitoli-section',
@@ -10,12 +10,25 @@ import { MainServiceService } from 'src/app/services/main-service.service';
 })
 export class CapitoliSectionComponent implements OnInit {
   capitoli: Capitolo[] = [];
+  selectedIndex: number = 0;
+
+  @ViewChild('slider') slider!: ElementRef;
 
   constructor(private service: MainServiceService, private router: Router) {}
 
   ngOnInit(): void {
     this.service.getAllChapters().subscribe((data) => {
       this.capitoli = data;
+    });
+  }
+
+  scrollToSlide(index: number): void {
+    this.selectedIndex = index;
+    const sliderElement = this.slider.nativeElement;
+    const slideWidth = sliderElement.offsetWidth;
+    sliderElement.scrollTo({
+      left: index * slideWidth,
+      behavior: 'smooth',
     });
   }
 

@@ -1,28 +1,50 @@
 .navbar {
   position: fixed;
-  top: 30px;
-  left: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #1f1f2e; /* sfondo scuro come nel sito */
   z-index: 1000;
 }
 
 .navbar ul {
-  list-style-type: none;
-  padding: 0;
+  display: flex;
+  gap: 40px;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .navbar li {
-  margin-bottom: 15px;
+  position: relative;
 }
 
 .navbar a {
+  color: white;
+  font-weight: 500;
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: color 0.3s;
+  font-size: 1rem;
+  padding-bottom: 5px;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.navbar a.active {
-  color: #007bff;
-  text-decoration: underline;
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar a.active::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: #ccc;
 }

@@ -12,6 +12,8 @@ public class Lezione {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String titolo;
+
+    @Column(columnDefinition = "TEXT")
     private String contenuto;
 
     @ManyToOne
