@@ -1,4 +1,10 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+  AfterViewInit,
+} from '@angular/core';
 import { MainServiceService } from '../../services/main-service.service';
 import { Capitolo } from '../../models/capitolo.model';
 import { Router } from '@angular/router';
@@ -8,28 +14,43 @@ import { Router } from '@angular/router';
   templateUrl: './capitoli-section.component.html',
   styleUrls: ['./capitoli-section.component.css'],
 })
-export class CapitoliSectionComponent implements OnInit {
+export class CapitoliSectionComponent implements OnInit, AfterViewInit {
   capitoli: Capitolo[] = [];
-  selectedIndex: number = 0;
+  selectedId: number = 0;
 
-  @ViewChild('slider') slider!: ElementRef;
+  @ViewChild('slider') slider!: ElementRef<HTMLDivElement>;
 
   constructor(private service: MainServiceService, private router: Router) {}
 
   ngOnInit(): void {
     this.service.getAllChapters().subscribe((data) => {
       this.capitoli = data;
+      if (data.length > 0) {
+        this.selectedId = data[0].id;
+      }
     });
   }
 
-  scrollToSlide(index: number): void {
-    this.selectedIndex = index;
-    const sliderElement = this.slider.nativeElement;
-    const slideWidth = sliderElement.offsetWidth;
-    sliderElement.scrollTo({
-      left: index * slideWidth,
-      behavior: 'smooth',
-    });
+  ngAfterViewInit(): void {
+    // Scroll iniziale, se vuoi
+    if (this.selectedId) {
+      this.scrollToSlideById(this.selectedId);
+    }
+  }
+
+  scrollToSlideById(id: number): void {
+    this.selectedId = id;
+
+    const target = document.getElementById('slide-' + id);
+    const sliderElement = this.slider?.nativeElement;
+
+    if (target && sliderElement) {
+      const offsetLeft = target.offsetLeft - sliderElement.offsetLeft;
+      sliderElement.scrollTo({
+        left: offsetLeft,
+        behavior: 'smooth',
+      });
+    }
   }
 
   vaiACapitolo(id: number): void {

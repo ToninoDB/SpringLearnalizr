@@ -24,6 +24,7 @@ public class DataLoader {
                         // Creazione dei capitoli con le lezioni
                         Capitolo intro = new Capitolo();
                         intro.setTitolo("Introduzione a Spring");
+                        intro.setDescrizione("Peppe sei un coglione");
                         intro.setLezioni(List.of(
                                         new Lezione("Cos'è Spring?",
                                                         "Spring è un framework open source che semplifica lo sviluppo di applicazioni JAVA Enterprise.\r\n",
