@@ -70,3 +70,31 @@
   font-size: 1.5rem;
   color: rgba(28, 136, 60, 0.8); /* Leaf Green */
 }
+
+.button-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: rgba(28, 136, 60, 0.8); /* Leaf Green */
+  color: #F4F4F4; /* Light Gray */
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px; /* Bordi arrotondati */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+.button-primary:hover {
+  background-color: #1C8840; /* Colore più scuro per hover */
+  transform: translateY(-2px); /* Effetto di sollevamento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombra più pronunciata */
+}
+
+.button-primary:active {
+  background-color: #166630; /* Colore ancora più scuro per il click */
+  transform: translateY(0); /* Rimuove l'effetto di sollevamento */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Ombra ridotta */
+}

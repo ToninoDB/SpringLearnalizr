@@ -1,10 +1,10 @@
 <section class="hero-container">
   <div class="hero-text">
-    <small>Capitolo {{ capitoloId }}</small>
+    <h2>Capitolo {{ capitoloId }}</h2>
     <h1>{{ titolo }}</h1>
     <p>{{ descrizione }}</p>
 
-    <button (click)="scroll.emit()">⬇ Inizia</button>
+    <button (click)="scroll.emit()" class="button-primary">⬇ Inizia</button>
   </div>
 
   <div class="hero-cards">
