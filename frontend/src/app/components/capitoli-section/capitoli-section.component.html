@@ -1,0 +1,34 @@
+<section class="capitoli-container">
+  <h2 class="section-title">Capitoli</h2>
+
+  <!-- 🔹 Navbar capitoli orizzontale -->
+  <div class="capitolo-navbar">
+    <ul>
+      <li
+        *ngFor="let c of capitoli"
+        [class.active]="c.id === selectedId"
+        (click)="scrollToSlideById(c.id)"
+      >
+        {{ c.titolo }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- 🔹 Slider orizzontale dei capitoli -->
+  <div class="capitolo-slider-wrapper">
+    <div class="capitolo-slider" #slider>
+      <div
+        class="capitolo-slide"
+        *ngFor="let c of capitoli"
+        [attr.id]="'slide-' + c.id"
+        [appFadeInOnScroll]="false"
+      >
+        <div class="capitolo-info">
+          <h3>{{ c.titolo }}</h3>
+          <p>{{ c.descrizione }}</p>
+          <button (click)="vaiACapitolo(c.id)">Vai al Capitolo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

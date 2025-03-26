@@ -1,0 +1,68 @@
+:root {
+  --leaf-green: rgba(28, 136, 60, 0.8);
+  --lime-spring: #A1D884;
+  --charcoal-gray: #4F4F4F;
+  --light-gray: #F4F4F4;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+.about-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, var(--light-gray), var(--lime-spring));
+  scroll-snap-align: start;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.about-description {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1.2rem;
+  color: var(--charcoal-gray);
+  line-height: 1.6;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.team-member {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  max-width: 250px;
+  transition: transfrom 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.team-member h4 {
+  margin: 0 0 10px;
+  color: var(--lime-spring);
+}
+
+.team-member a {
+  color: var(--lime-spring);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.team-member a:hover {
+  color: var(--leaf-green);
+  text-decoration: underline;
+}
+
+

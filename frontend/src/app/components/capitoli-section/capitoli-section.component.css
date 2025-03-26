@@ -1,0 +1,149 @@
+:root {
+  --leaf-green: rgba(28, 136, 60, 0.8);
+  --lime-spring: #A1D884;
+  --charcoal-gray: #4F4F4F;
+  --light-gray: #F4F4F4;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+.capitoli-container {
+  height: 100vh;
+  padding: 40px;
+  background-color: var(--light-gray);
+  color: var(--charcoal-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  color:var(--lime-spring);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Navbar orizzontale stile Seeing Theory */
+.capitolo-navbar {
+  margin-bottom: 20px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.capitolo-navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.capitolo-navbar li {
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3 ease;
+  color: var(--charcoal-gray);
+}
+
+.capitolo-navbar li.active{
+  color: var(--lime-spring);
+}
+
+.capitolo-navbar li.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--lime-spring);
+  transition: width 0.3s ease;
+}
+
+.capitolo-navbar li:hover{
+  color: var(--leaf-green);
+}
+
+/* Slider orizzontale */
+.capitolo-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+}
+
+.capitolo-slider {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; /* per IE */
+  scrollbar-width: none; /* per Firefox */
+}
+
+.capitolo-slider::-webkit-scrollbar {
+  display: none; /* per Chrome/Safari */
+}
+
+.capitolo-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.capitolo-info {
+  background-color: var(--white);
+  color: var(--charcoal-gray);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  height: fit-content;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capitolo-info:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.capitolo-info button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--leaf-green);
+  border: none;
+  color: var(--white);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.capitolo-info button:hover {
+  background-color: var(--lime-spring);
+}
+
+.capitolo-info::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--leaf-green);
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.capitolo-info:hover::before{
+  background-color: var(--lime-spring);
+}
