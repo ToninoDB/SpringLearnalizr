@@ -8,6 +8,7 @@ body {
   color: #4f4f4f; /* Charcoal Gray */
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* Assicura che il contenitore principale occupi l'intera altezza */
@@ -25,8 +26,9 @@ body {
   flex-direction: column;
   align-items: center; /* Centra gli elementi orizzontalmente */
   justify-content: center; /* Centra gli elementi verticalmente */
-  padding: 40px;
+  padding: 20px;
   margin: 0;
+  text-align: center;
 }
 
 .section-container.light {
@@ -109,5 +111,21 @@ body {
 .fade-in-section.visible {
   opacity: 1;
   transform: translateY(0); /* Riporta alla posizione originale */
+}
+
+/* Media queries per dispositivi mobili */
+@media (max-width: 768px) {
+  .section-container {
+    padding: 10px;
+    height: auto;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
 }
 

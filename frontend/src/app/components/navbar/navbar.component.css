@@ -56,12 +56,19 @@
   border-radius: 4px; /* Aggiunge un bordo arrotondato per hover */
 }
 
-/* Effetto di separazione visiva */
-.navbar-shadow {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(to right, #A1D884, rgba(28, 136, 60, 0.8)); /* Gradiente per separazione */
+/* Media queries per dispositivi mobili */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+  }
 }
