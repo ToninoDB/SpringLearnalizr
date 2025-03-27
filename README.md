@@ -3,7 +3,9 @@
 ## 👥​ Contributors
 - Aniello Bagno
 - Giuseppe Ragosta
-- Antonio Russomando, Linkdein: https://www.linkedin.com/in/antonio-russomando-6559aa357/  Email: antonio.russomando11@gmail.com
+- Antonio Russomando
+  Linkedin: https://www.linkedin.com/in/antonio-russomando-6559aa357/
+  Email: antonio.russomando11@gmail.com
 
 ## 📘 Descrizione del Progetto
 
