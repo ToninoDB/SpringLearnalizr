@@ -2,7 +2,7 @@
 
 ## 👥​ Contributors
 - Aniello Bagno
-  Linkedin:
+  Linkedin: https://www.linkedin.com/in/aniello-bagno-a03243359/
   Email: bagnoaniello@gmail.com
   
 - Giuseppe Ragosta
