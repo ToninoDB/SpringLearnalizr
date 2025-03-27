@@ -59,7 +59,7 @@ Il modello dati principale include:
 ## ⚙️ Tecnologie Utilizzate
 
 ### Backend
-- Java 17
+- Java 21
 - Spring Boot
 - Spring Data JPA
 - MySQL
