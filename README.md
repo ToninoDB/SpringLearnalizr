@@ -72,7 +72,7 @@ Il modello dati principale include:
 - RxJS
 
 ## 💻 Implementazioni future
-Essendo un primo prototipo di una webapp educativa, abbiamo alcune idee da poter implementare in futuro per migliorare il percorso di apprendimento degli utenti. Si è pensato di poter aggiugnere delle vere e proprie task di apprendimento a fine lezione così da imprimere meglio i concetti logici del framework e magari aggiungere anche degli esercizi (es. vedi https://www.w3schools.com/). Quindi ogni utente potrà decidere di registrarsi al sito e nella sezione personale vedere tutti i progressi di apprendimento fatto, le varie lezioni seguite, gli esercizi svolti, ecc...
+Essendo un primo prototipo di una webapp educativa, lo abbiamo reso quanto più scalabile e ottimizzato possibile così da poter implementare in futuro nuove feature già discusse durante la fase di stesura del paper. Si è pensato di poter aggiugnere delle vere e proprie task di apprendimento a fine lezione così da imprimere meglio i concetti logici del framework e magari aggiungere anche degli esercizi (es. vedi https://www.w3schools.com/). Quindi ogni utente potrà decidere di registrarsi al sito e nella sezione personale vedere tutti i progressi di apprendimento fatto, le varie lezioni seguite, gli esercizi svolti, ecc...
 
 Il team di sviluppo è aperto all'aggiunta di nuove features da parte degli utenti e feedback per avere un prodotto finale ottimizzato e funzionale.
 
