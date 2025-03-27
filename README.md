@@ -1,72 +1,93 @@
-# Spring Learnalizr
+# SpringLearnalizr
 
-## Progetto Spring Learnalizr - Piattaforma Educativa
+## 📘 Descrizione del Progetto
 
-### 1. Introduzione
-**Spring Learnalizr** è una webapp educativa progettata per supportare l'apprendimento del framework **Spring** di Java attraverso un sistema interattivo.  
-L'idea alla base di questo progetto è ispirata alla webapp **Seeing Theory**.  
-Il progetto utilizza il framework **Spring Boot** per il backend e **Angular** per il frontend.
+**SpringLearnalizr** è una webapp educativa progettata per supportare l'apprendimento del framework **Spring di Java** tramite un sistema **interattivo e visivo**.  
+Lʼidea prende ispirazione dalla webapp *Seeing Theory*, con lʼobiettivo di rendere i concetti complessi di Spring facilmente accessibili anche a chi è alle prime armi.
 
----
+La piattaforma è suddivisa in **capitoli**, ognuno dei quali introduce e spiega visivamente concetti fondamentali come Spring MVC, Dependency Injection, REST API, Hibernate e altro ancora.
 
-### 2. Struttura dell’app
-L’app sarà divisa in **capitoli interattivi** per coprire i principali concetti di Spring:
+## 🧱 Struttura del Progetto
 
-#### **Introduzione a Spring**
-- Cos’è Spring e perché viene utilizzato
-- Nessuna configurazione iniziale
-- Risoluzione codice boilerplate
-- SpringBoot Initializr
+La repository è organizzata in due macro-directory:
 
----
+- **backend/** – Applicazione Spring Boot che espone API REST per il frontend.
+- **frontend/** – Applicazione Angular responsabile dell'interfaccia utente e dell'interazione con gli utenti.
 
-#### **Dependency Injection**
-- Spiegazione della Dependency Injection (DI)
-- **IoC** (Inversion of Control)
-- **Bean** & **Autowired**
+### 📂 Backend (Spring Boot)
 
----
+Il backend gestisce:
 
-#### **Spring MVC**
-- Spiegazione del pattern **Model-View-Controller** (MVC)
+- La struttura dei **capitoli** e delle relative **lezioni**
+- Le API per il recupero dei contenuti didattici
+- Connessione al database **MySQL**
+- Librerie e tecnologie usate:
+  - Spring Boot
+  - Spring Data JPA
+  - MySQL
+  - Gradle
 
----
+### 📂 Frontend (Angular)
 
-#### **Hibernate**
-- Spiegazione di Hibernate  
-- **JPA** (Java Persistence API)  
-- **ORM** (Object-Relational Mapping)  
+Il frontend gestisce:
 
----
+- Navigazione tra capitoli
+- Visualizzazione dinamica e responsive delle lezioni
+- Scroll orizzontale con animazioni e transizioni
+- Architettura basata su componenti Angular
 
-#### **API REST**
-- Cosa sono le API REST  
-- Tipi di API REST  
+## 📚 Contenuti Trattati
 
----
+Ogni capitolo della piattaforma affronta un concetto base del framework Spring:
 
-#### **Spring Security**
-- Tutorial creazione progetto Spring  
+- **Introduzione a Spring**
+- **Dependency Injection**
+- **Spring MVC**
+- **Hibernate & JPA**
+- **API REST**
+- **Spring Security**
+- **Tutorial pratico: Creazione di un progetto Spring**
 
----
+## 🧠 Architettura Dati
 
-### 3. Tecnologie Utilizzate
-**Backend:**
-- Spring Boot  
-- Spring Data JPA  
-- MySQL  
-- Gradle  
+Il modello dati principale include:
 
-**Frontend:**
-- Angular  
+- `Capitolo`: rappresenta una sezione tematica (es. "Spring MVC").
+- `Lezione`: rappresenta i contenuti di un capitolo (paragrafi, spiegazioni, esercizi).
+- Relazione **uno-a-molti** tra Capitolo e Lezione.
 
----
+## ⚙️ Tecnologie Utilizzate
 
-### 4. Diagramma delle classi
-La classe **Capitolo** rappresenta i capitoli degli argomenti che verranno spiegati.  
-La classe **Lezione** rappresenta i paragrafi del capitolo.  
-La classe **Media** conterraà i media associato ad ogni lezione.
-La relazione tra le due classi sarà **uno-a-molti**, poiché un capitolo può avere più di una lezione.  
+### Backend
+- Java 17
+- Spring Boot
+- Spring Data JPA
+- MySQL
+- Gradle
 
----
+### Frontend
+- Angular 16
+- TypeScript
+- HTML5 + CSS3 / SCSS
+- RxJS
 
+## ⚙️ Implementazioni future
+Essendo un primo prototipo di una webapp educativa, abbiamo alcune idee da poter implementare in futuro per migliorare il percorso di apprendimento degli utenti. Si è pensato di poter aggiugnere delle vere e proprie task di apprendimento a fine lezione così da imprimere meglio i concetti logici del framework e magari aggiungere anche degli esercizi (es. vedi https://www.w3schools.com/). Quindi ogni utente potrà decidere di registrarsi al sito e nella sezione personale vedere tutti i progressi di apprendimento fatto, le varie lezioni seguite, gli esercizi svolti, ecc...
+
+Il team di sviluppo è aperto all'aggiunta di nuove features da parte degli utenti e feedback per avere un prodotto finale ottimizzato e funzionale.
+
+## 🚀 Avvio del Progetto
+
+### Backend
+
+```bash
+cd backend
+./gradlew bootRun
+```
+
+### Frontend
+```bash 
+cd frontend
+npm install
+ng serve
+```
