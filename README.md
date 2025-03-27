@@ -2,7 +2,13 @@
 
 ## 👥​ Contributors
 - Aniello Bagno
+  Linkedin:
+  Email: bagnoaniello@gmail.com
+  
 - Giuseppe Ragosta
+  Linkedin: https://www.linkedin.com/in/giuseppe-ragosta-a16409253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
+  Email: giuseppe.ragosta29@gmail.com
+  
 - Antonio Russomando
   Linkedin: https://www.linkedin.com/in/antonio-russomando-6559aa357/
   Email: antonio.russomando11@gmail.com
