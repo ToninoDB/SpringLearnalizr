@@ -1,10 +1,11 @@
 package com.learnalizr.backend.model;
 
 import jakarta.persistence.*;
-import java.util.List;
+
+//import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+//import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class Lezione {
@@ -21,17 +22,24 @@ public class Lezione {
     @JsonBackReference
     private Capitolo capitolo;
 
-    @OneToMany(mappedBy = "lezione", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JsonManagedReference
-    private List<Media> media;
+    /*
+     * @OneToMany(mappedBy = "lezione", cascade = CascadeType.ALL, fetch =
+     * FetchType.LAZY)
+     * 
+     * @JsonManagedReference
+     * private List<Media> media;
+     */
+
+    private String img_path;
 
     public Lezione() {
     }
 
-    public Lezione(String titolo, String contenuto, Capitolo capitolo, Media media) {
+    public Lezione(String titolo, String contenuto, Capitolo capitolo, String img_path) {
         this.titolo = titolo;
         this.contenuto = contenuto;
         this.capitolo = capitolo;
+        this.img_path = img_path;
     }
 
     public void setID(Long id) {
@@ -66,12 +74,12 @@ public class Lezione {
         return capitolo;
     }
 
-    public void setMedia(List<Media> media) {
-        this.media = media;
+    public String getImg_path() {
+        return img_path;
     }
 
-    public List<Media> getMedia() {
-        return media;
+    public void setImg_path(String img_path) {
+        this.img_path = img_path;
     }
 
     @Override

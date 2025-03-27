@@ -21,15 +21,16 @@
 
 /* Animazione X */
 .hamburger.open span:nth-child(1) {
-  transform: rotate(-45deg) translateY(8px);
+  transform: rotate(45deg) translateX(13.5px);
 }
 
 .hamburger.open span:nth-child(2) {
   opacity: 0;
+  width: 0%;
 }
 
 .hamburger.open span:nth-child(3) {
-  transform: rotate(45deg) translateY(-8px);
+  transform: rotate(-45deg) translateX(13.5px);
 }
 
 .overlay {
@@ -89,7 +90,7 @@ li:hover {
   right: 20px;
   padding: 10px 20px;
   background-color: rgba(28, 136, 60, 0.8); /* Leaf Green */
-  color: #F4F4F4; /* Light Gray */
+  color: #f4f4f4; /* Light Gray */
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
@@ -100,9 +101,15 @@ li:hover {
 }
 
 .home-link:hover {
-  background-color: #1C8840; /* Colore più scuro per hover */
+  background-color: #1c8840; /* Colore più scuro per hover */
   transform: translateY(-2px); /* Effetto di sollevamento */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombra più pronunciata */
+}
+
+.home-link:active {
+  background-color: #166630; /* Colore ancora più scuro per il click */
+  transform: translateY(0); /* Rimuove l'effetto di sollevamento */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Ombra ridotta */
 }
 
 .home-link:active {

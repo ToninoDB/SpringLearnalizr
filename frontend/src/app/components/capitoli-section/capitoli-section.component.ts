@@ -31,6 +31,7 @@ export class CapitoliSectionComponent implements OnInit, AfterViewInit {
     });
   }
 
+  //Ricorda in quale sezione della pagina ero per ritornarci dopo che sono uscito dalla pagina principale
   ngAfterViewInit(): void {
     // Scroll iniziale, se vuoi
     if (this.selectedId) {

@@ -1,9 +1,10 @@
 <section class="capitoli-container">
   <h2 class="section-title">Capitoli</h2>
 
-  <!-- 🔹 Navbar capitoli orizzontale -->
+  <!-- Navbar capitoli orizzontale -->
   <div class="capitolo-navbar">
     <ul>
+      <!-- [class.active] -> property binding che applica dinamicamente la classe 'active' CSS -->
       <li
         *ngFor="let c of capitoli"
         [class.active]="c.id === selectedId"
@@ -14,9 +15,10 @@
     </ul>
   </div>
 
-  <!-- 🔹 Slider orizzontale dei capitoli -->
+  <!-- Slider orizzontale dei capitoli -->
   <div class="capitolo-slider-wrapper">
     <div class="capitolo-slider" #slider>
+      <!-- [attr.id] -> attribute binding che imposta l'attributo 'id' dell'elemento HTML con un valore dinamico -->
       <div
         class="capitolo-slide"
         *ngFor="let c of capitoli"

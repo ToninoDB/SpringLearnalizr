@@ -131,3 +131,84 @@
 .capitolo-info button:hover {
   background-color: #a1d884; /* Lime Green */
 }
+@media (max-width: 1024px) and (min-width: 769px) {
+  .capitolo-navbar ul {
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 0 20px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+  }
+
+  .capitolo-navbar li {
+    font-size: 1.1rem;
+    white-space: nowrap;
+    scroll-snap-align: start;
+  }
+
+  .capitolo-info {
+    max-width: 80%;
+    padding: 30px;
+  }
+
+  .capitolo-info button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .capitolo-navbar ul::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .capitolo-navbar ul::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .capitolo-navbar ul::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .capitolo-navbar ul {
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .capitolo-navbar li {
+    font-size: 1rem;
+    white-space: nowrap;
+    scroll-snap-align: start;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .capitolo-info {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .capitolo-info button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .capitolo-navbar ul::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .capitolo-navbar ul::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .capitolo-navbar ul::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+  }
+}

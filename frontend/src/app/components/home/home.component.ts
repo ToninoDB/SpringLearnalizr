@@ -7,13 +7,13 @@ import { MainServiceService } from 'src/app/services/main-service.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  chapters: any[] = [];
+  capitoli: any[] = [];
 
   constructor(private service: MainServiceService) {}
 
   ngOnInit(): void {
     this.service.getAllChapters().subscribe((data) => {
-      this.chapters = data;
+      this.capitoli = data;
     });
   }
 }
