@@ -1,0 +1,29 @@
+<section *ngIf="capitolo" class="capitolo-wrapper">
+  <!-- Hero: titolo e descrizione -->
+  <app-hero-capitolo
+    [capitoloId]="capitolo.id"
+    [titolo]="capitolo.titolo"
+    [descrizione]="capitolo.descrizione"
+    [lezioni]="capitolo.lezioni || []"
+    [appFadeInOnScroll]="true"
+    (scroll)="scrollToPrimaLezione()"
+  ></app-hero-capitolo>
+
+  <!-- Sezioni verticali: ogni lezione -->
+  <div class="lezioni-section">
+    <app-lezione-capitolo
+      *ngFor="let lezione of capitolo.lezioni"
+      [lezione]="lezione"
+      [attr.id]="'lezione-' + lezione.id"
+      [appFadeInOnScroll]="true"
+    >
+    </app-lezione-capitolo>
+  </div>
+
+  <!-- Sidebar menu per mobile/desktop -->
+  <app-sidebar-menu-capitolo
+    [capitoloId]="capitolo.id"
+    [lezioni]="capitolo.lezioni || []"
+    [titoloCapitolo]="capitolo.titolo"
+  ></app-sidebar-menu-capitolo>
+</section>

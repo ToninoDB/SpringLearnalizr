@@ -1,0 +1,10 @@
+.capitolo-wrapper {
+  scroll-behavior: smooth;
+  background-color: #e3f8ff;
+  min-height: 100vh;
+}
+
+.lezioni-section {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,215 @@
+.capitoli-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Dispone gli elementi in colonna */
+  align-items: center; /* Centra gli elementi orizzontalmente */
+  justify-content: center; /* Centra gli elementi verticalmente */
+  background: linear-gradient(
+    to top right,
+    rgba(28, 136, 60, 0.8),
+    #a1d884
+  ); /* Gradiente da Leaf Green a Lime Green */
+  color: #f4f4f4; /* Light Gray */
+  padding: 40px;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f4f4f4; /* Light Gray */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Aggiunge profondità al testo */
+  text-align: center;
+}
+
+/* Navbar orizzontale stile Seeing Theory */
+.capitolo-navbar {
+  margin-bottom: 20px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.capitolo-navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.capitolo-navbar li {
+  cursor: pointer;
+  font-size: 1.2rem; /* Aumenta la dimensione del testo */
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+  transition: font-size 0.3s ease, color 0.3 ease;
+  color: #f4f4f4; /* Light Gray */
+}
+
+.capitolo-navbar li.active {
+  color: #ffffff; /* Lime Green */
+}
+
+.capitolo-navbar li.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff; /* Lime Green */
+  transition: width 0.3s ease;
+}
+
+.capitolo-navbar li:hover {
+  color: rgba(250, 250, 250, 0.8); /* Leaf Green */
+}
+
+/* Slider orizzontale */
+.capitolo-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+}
+
+.capitolo-slider {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; /* per IE */
+  scrollbar-width: none; /* per Firefox */
+}
+
+.capitolo-slider::-webkit-scrollbar {
+  display: none; /* per Chrome/Safari */
+}
+
+.capitolo-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.capitolo-info {
+  background-color: #ffffff; /* White */
+  color: #4f4f4f; /* Charcoal Gray */
+  padding: 40px;
+  border-radius: 12px;
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  height: fit-content;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capitolo-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.capitolo-info button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: rgba(28, 136, 60, 0.8); /* Leaf Green */
+  border: none;
+  color: #ffffff; /* White */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.capitolo-info button:hover {
+  background-color: #a1d884; /* Lime Green */
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  .capitolo-navbar ul {
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 0 20px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+  }
+
+  .capitolo-navbar li {
+    font-size: 1.1rem;
+    white-space: nowrap;
+    scroll-snap-align: start;
+  }
+
+  .capitolo-info {
+    max-width: 80%;
+    padding: 30px;
+  }
+
+  .capitolo-info button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .capitolo-navbar ul::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .capitolo-navbar ul::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .capitolo-navbar ul::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .capitolo-navbar ul {
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .capitolo-navbar li {
+    font-size: 1rem;
+    white-space: nowrap;
+    scroll-snap-align: start;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .capitolo-info {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .capitolo-info button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .capitolo-navbar ul::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .capitolo-navbar ul::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .capitolo-navbar ul::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+  }
+}
