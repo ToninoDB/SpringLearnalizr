@@ -5,5 +5,5 @@ export interface Lezione {
   titolo: string;
   contenuto: string;
   capitoloId: number;
-  media?: Media[];
+  img_path: string;
 }

@@ -11,15 +11,14 @@
     </div>
 
     <!-- Media a destra -->
-    <div class="media" *ngIf="lezione.media && lezione.media.length > 0">
-      <ng-container *ngFor="let m of lezione.media">
-        <!-- <img *ngIf="m.tipo === 'image'" [src]="m.url" [alt]="m.alt || ''" />
-        <video
-          *ngIf="m.tipo === 'video'"
-          [src]="m.url"
-          controls
-          [poster]="m.poster"
-        ></video> -->
+    <div class="media" *ngIf="lezione.img_path && lezione.img_path.length > 0">
+      <ng-container>
+        <img
+          [src]="
+            'http://localhost:8080/api/images/' + lezione.img_path + '.png'
+          "
+          [alt]="lezione.img_path"
+        />
       </ng-container>
     </div>
   </div>
