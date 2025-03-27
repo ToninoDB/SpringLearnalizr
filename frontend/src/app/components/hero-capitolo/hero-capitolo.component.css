@@ -1,0 +1,104 @@
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    to bottom right,
+    rgba(28, 136, 60, 0.8),
+    #a1d884
+  ); /* Gradiente */
+  flex-wrap: wrap;
+  height: 100vh; /* Occupa l'intera altezza della finestra */
+  padding: 40px 80px;
+  color: #f4f4f4; /* Light Gray */
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 3rem; /* Stessa dimensione del titolo in capitolo.component.css */
+  font-weight: bold;
+  color: #f4f4f4; /* Light Gray */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Aggiunge profondità al testo */
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #f4f4f4; /* Light Gray */
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Aggiunge profondità al testo */
+}
+
+.scroll-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: rgba(28, 136, 60, 0.8); /* Leaf Green */
+  border: none;
+  color: #f4f4f4; /* Light Gray */
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: #0056b3;
+}
+
+.hero-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  min-width: 250px;
+}
+
+.lezione-card {
+  background: #ffffff; /* White */
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 500;
+  color: #4f4f4f; /* Charcoal Gray */
+}
+
+.card-icon {
+  font-size: 1.5rem;
+  color: rgba(28, 136, 60, 0.8); /* Leaf Green */
+}
+
+.button-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: rgba(28, 136, 60, 0.8); /* Leaf Green */
+  color: #f4f4f4; /* Light Gray */
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px; /* Bordi arrotondati */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+.button-primary:hover {
+  background-color: #1c8840; /* Colore più scuro per hover */
+  transform: translateY(-2px); /* Effetto di sollevamento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombra più pronunciata */
+}
+
+.button-primary:active {
+  background-color: #166630; /* Colore ancora più scuro per il click */
+  transform: translateY(0); /* Rimuove l'effetto di sollevamento */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Ombra ridotta */
+}

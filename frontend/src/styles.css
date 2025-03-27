@@ -1,0 +1,129 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+/* Stile generale */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4; /* Light Gray */
+  color: #4f4f4f; /* Charcoal Gray */
+  margin: 0;
+  padding: 0;
+}
+
+/* Assicura che il contenitore principale occupi l'intera altezza */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sezioni principali */
+.section-container {
+  height: 100vh; /* Ogni sezione occupa l'intera altezza della finestra */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra gli elementi orizzontalmente */
+  justify-content: center; /* Centra gli elementi verticalmente */
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+.section-container.light {
+  background: linear-gradient(
+    to bottom right,
+    rgba(28, 136, 60, 0.8),
+    #a1d884
+  ); /* Gradiente */
+  color: #f4f4f4; /* Light Gray */
+}
+
+.section-container.dark {
+  background: #4f4f4f; /* Charcoal Gray */
+  color: #f4f4f4; /* Light Gray */
+}
+
+/* Titoli delle sezioni */
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Aggiunge profondità al testo */
+  text-align: center;
+}
+
+/* Descrizioni */
+.section-description {
+  max-width: 800px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Aggiunge profondità al testo */
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navbar li {
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+  color: #f4f4f4; /* Light Gray */
+}
+
+.navbar li.active {
+  color: #a1d884; /* Lime Green */
+}
+
+.navbar li.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #a1d884; /* Lime Green */
+  transition: width 0.3s ease;
+}
+
+.navbar li:hover {
+  color: rgba(28, 136, 60, 0.8); /* Leaf Green */
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Media queries per dispositivi mobili */
+@media (max-width: 768px) {
+  .section-container {
+    padding: 10px;
+    height: auto;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+}
