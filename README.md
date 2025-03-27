@@ -1,5 +1,10 @@
 # SpringLearnalizr
 
+## 👥​ Contributors
+- Aniello Bagno
+- Giuseppe Ragosta
+- Antonio Russomando, https://www.linkedin.com/in/antonio-russomando-6559aa357/
+
 ## 📘 Descrizione del Progetto
 
 **SpringLearnalizr** è una webapp educativa progettata per supportare l'apprendimento del framework **Spring di Java** tramite un sistema **interattivo e visivo**.  
