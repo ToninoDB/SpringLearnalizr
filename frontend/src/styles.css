@@ -25,8 +25,9 @@ body {
   flex-direction: column;
   align-items: center; /* Centra gli elementi orizzontalmente */
   justify-content: center; /* Centra gli elementi verticalmente */
-  padding: 40px;
+  padding: 20px;
   margin: 0;
+  text-align: center;
 }
 
 .section-container.light {
@@ -109,4 +110,20 @@ body {
 .fade-in-section.visible {
   opacity: 1;
   transform: none;
+}
+
+/* Media queries per dispositivi mobili */
+@media (max-width: 768px) {
+  .section-container {
+    padding: 10px;
+    height: auto;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
 }

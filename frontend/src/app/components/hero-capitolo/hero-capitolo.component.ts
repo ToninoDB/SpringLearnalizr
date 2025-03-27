@@ -12,6 +12,6 @@ export class HeroCapitoloComponent {
   @Input() descrizione!: string;
   @Input() lezioni: Lezione[] = [];
 
-  @Output() scrollToLezione = new EventEmitter<number>();
+  //Prende lo scroll dal capitolo.component.html e lo applica al component hero-captiolo con l'evento (click) sul button (scroll.emit)
   @Output() scroll = new EventEmitter<void>();
 }

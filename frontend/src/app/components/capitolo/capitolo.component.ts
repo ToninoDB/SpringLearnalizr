@@ -17,6 +17,8 @@ export class CapitoloComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    //Recupera il capitolo selezionato dal route param
+    //Estrae l'id dalla URL (es: /capitolo/3)
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.service.getChapterById(id).subscribe((data) => {
       this.capitolo = data;

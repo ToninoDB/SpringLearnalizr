@@ -1,5 +1,7 @@
 .about-container {
   height: 100vh;
+  font-size: 1.6rem; /* Aumentato da 1.2rem a 1.6rem */
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,12 +10,11 @@
   flex-direction: column;
   color: #f4f4f4; /* Light Gray */
   padding: 40px;
-  scroll-snap-align: start;
   overflow: hidden;
 }
 
 .about-title {
-  font-size: 3rem;
+  font-size: 4rem; /* Aumentato da 3rem a 4rem */
   font-weight: bold; /* Titolo in grassetto */
   color: #f4f4f4; /* Light Gray */
   margin-bottom: 20px;
@@ -23,10 +24,10 @@
 
 .about-description {
   max-width: 800px;
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* Aumentato da 1.2rem a 1.5rem */
   font-weight: 500; /* Testo leggermente più marcato */
   color: #f4f4f4; /* Light Gray */
-  line-height: 1.6;
+  line-height: 1.8; /* Aumentato per migliorare la leggibilità */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Aggiunge profondità al testo */
   text-align: center; /* Centra il testo */
   margin-bottom: 40px;

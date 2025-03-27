@@ -52,5 +52,23 @@
 }
 
 .navbar a:hover {
-  color: #ccc;
+  color: rgba(250, 250, 250, 0.8); /* Leaf Green */
+  border-radius: 4px; /* Aggiunge un bordo arrotondato per hover */
+}
+
+/* Media queries per dispositivi mobili */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+    gap: 20%;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+  }
 }

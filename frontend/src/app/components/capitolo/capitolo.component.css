@@ -7,6 +7,4 @@
 .lezioni-section {
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  padding: 40px 80px;
 }
