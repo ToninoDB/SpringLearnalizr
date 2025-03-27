@@ -71,7 +71,7 @@ Il modello dati principale include:
 - HTML5 + CSS3 / SCSS
 - RxJS
 
-## ⚙️ Implementazioni future
+## 💻 Implementazioni future
 Essendo un primo prototipo di una webapp educativa, abbiamo alcune idee da poter implementare in futuro per migliorare il percorso di apprendimento degli utenti. Si è pensato di poter aggiugnere delle vere e proprie task di apprendimento a fine lezione così da imprimere meglio i concetti logici del framework e magari aggiungere anche degli esercizi (es. vedi https://www.w3schools.com/). Quindi ogni utente potrà decidere di registrarsi al sito e nella sezione personale vedere tutti i progressi di apprendimento fatto, le varie lezioni seguite, gli esercizi svolti, ecc...
 
 Il team di sviluppo è aperto all'aggiunta di nuove features da parte degli utenti e feedback per avere un prodotto finale ottimizzato e funzionale.
